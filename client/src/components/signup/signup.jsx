@@ -14,6 +14,7 @@ import FormLabel from "@mui/material/FormLabel";
 const SignUp = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
   const [userType, setUserType] = useState("");
   const [address, setAddress] = useState("");
   const [phone, setPhone] = useState("");
@@ -32,7 +33,6 @@ const SignUp = () => {
       address,
       phone,
     });
-    console.log("result", result);
     if (result.status !== 500) {
       alert("Added successfully");
     } else {
@@ -98,24 +98,14 @@ const SignUp = () => {
             aria-labelledby="demo-controlled-radio-buttons-group"
             name="controlled-radio-buttons-group"
             value={userType}
-            onChange={(e) => setUserType(e.target.value)}
-          >
+            onChange={(e) => setUserType(e.target.value)}>
             <FormControlLabel value="user" control={<Radio />} label="User" />
-            <FormControlLabel
-              value="premium-user"
-              control={<Radio />}
-              label="Premium User"
-            />
+            <FormControlLabel value="premium-user" control={<Radio />} label="Premium User" />
           </RadioGroup>
         </FormControl>
 
         <br />
-        <Button
-          className="button"
-          type="submit"
-          variant="contained"
-          onClick={handleCreate}
-        >
+        <Button className="button" type="submit" variant="contained" onClick={handleCreate}>
           Sign Up
         </Button>
         <br />

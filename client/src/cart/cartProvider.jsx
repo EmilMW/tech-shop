@@ -18,8 +18,6 @@ export function CartProvider({ children }) {
 
   const deleteFromCart = async (id) => {
     const newCart = cart.filter((cartItem) => cartItem.product._id !== id);
-    console.log("id", id);
-    console.log("newCart", newCart);
     await fetcher(`/carts/${id}`, "DELETE");
     setCart(newCart);
   };
@@ -44,8 +42,6 @@ export function CartProvider({ children }) {
   const addToCart = async (product, quantity) => {
     if (user) {
       try {
-        // const currentCart = await fetcher(`/carts/${product._id}/${quantity}`);
-        // console.log("currentCart", currentCart);
         setCart((prevCart) => {
           if (prevCart.find((item) => item.product._id === product._id)) {
             const newCart = prevCart.map((item) => {

@@ -15,7 +15,6 @@ async function createProduct(req, res) {
     const newProduct = await Products.create(req.body);
     res.status(201).json(newProduct);
   } catch (err) {
-    console.log(err);
     res.status(500).json({
       message: err.message,
     });

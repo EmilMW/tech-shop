@@ -53,7 +53,6 @@ async function refresh(req, res) {
   if (token) {
     jwt.verify(token, jwtConfig.secret, (err, decodedToken) => {
       if (err) {
-        console.log(err.message);
         res.send("Token invalid");
       } else {
         res.status(201).json({
@@ -81,13 +80,12 @@ async function signup(req, res) {
   const { username, password, userType, address, phone } = req.body;
   try {
     const user = {
-      username,
-      password,
+      username: username,
+      password: password,
       type: userType,
       address: address,
       phone: phone,
     };
-    console.log("user", user);
     const userExist = await Users.findOne({ username });
     if (userExist) {
       throw new Error("User already exist");
