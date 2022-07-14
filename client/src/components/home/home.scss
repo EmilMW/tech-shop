@@ -1,0 +1,32 @@
+#home {
+  .hero {
+    height: 95vh;
+    display: grid;
+    place-items: center;
+  }
+
+  .innerDiv {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    height: 80vh;
+    width: 30vw;
+    display: grid;
+    align-items: center;
+    place-items: center;
+
+    h1 {
+      text-decoration: underline;
+      font-family: Georgia, "Times New Roman", Times, serif, "Arial Narrow", Arial, sans-serif;
+    }
+
+    h4 {
+      text-align: center;
+    }
+  }
+
+  .logo {
+    width: 200px;
+    height: 200px;
+  }
+}
