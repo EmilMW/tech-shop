@@ -37,6 +37,10 @@ export function CartProvider({ children }) {
     setCart(newCart);
   };
 
+  const emptyCart = () => {
+    setCart([]);
+  };
+
   const addToCart = async (product, quantity) => {
     if (user) {
       try {
@@ -48,12 +52,11 @@ export function CartProvider({ children }) {
               if (item.product._id === product._id) {
                 return {
                   ...item,
-                  quantity: item.quantity + parseInt(quantity),
+                  quantity: parseFloat(item.quantity) + parseFloat(quantity),
                 };
               }
               return item;
             });
-            console.log("newCart", newCart);
             return newCart;
           }
           return [...prevCart, { product, quantity }];
@@ -64,7 +67,7 @@ export function CartProvider({ children }) {
     }
   };
 
-  const value = { cart, deleteFromCart, addToCart, updateQuantity };
+  const value = { cart, deleteFromCart, addToCart, updateQuantity, emptyCart };
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 }

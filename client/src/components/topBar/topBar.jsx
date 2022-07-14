@@ -23,11 +23,9 @@ export default function TopBar() {
         {auth && auth.user?.type === "admin" ? (
           <Tab label="Add Product" value="/add-product" to="/add-product" component={Link} />
         ) : null}
+        <Tab key="Cart" label="Cart" value="/cart" to="/cart" component={Link} />
         {auth.user ? (
-          [
-            <Tab key="Logout" label="Logout" value="/login" onClick={handleLogout} />,
-            <Tab key="Cart" label="Cart" value="/cart" to="/cart" component={Link} />,
-          ]
+          <Tab key="Logout" label="Logout" value="/login" onClick={handleLogout} />
         ) : (
           <Tab label="Login" value="/login" to="/login" component={Link} />
         )}

@@ -4,6 +4,10 @@
   align-items: center;
   text-align: center;
 
+  .root {
+    padding: 20px;
+  }
+
   .card {
     flex-direction: column;
     margin-left: auto;
@@ -15,7 +19,6 @@
     border-radius: 10px;
     overflow: hidden;
     align-items: center;
-    width: 1000px;
 
     .container {
       display: flex;
@@ -32,6 +35,12 @@
         height: 100%;
         object-fit: cover;
         border-radius: 20px;
+      }
+    }
+
+    @media screen and (max-width: 700px) {
+      .container {
+        flex-direction: column;
       }
     }
 

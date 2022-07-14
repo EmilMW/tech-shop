@@ -6,11 +6,11 @@
 }
 
 .title {
-  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   font-size: 30px;
   height: 100px;
   font-weight: bold;
-  color: #B3E5FC;
+  color: #b3e5fc;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,10 +38,7 @@
 }
 
 .expired {
-  font-family: 'Roboto',
-    'Helvetica',
-    'Arial',
-    sans-serif;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
 
   color: gray;
   width: 100%;
@@ -49,10 +46,7 @@
 }
 
 .alive {
-  font-family: 'Roboto',
-    'Helvetica',
-    'Arial',
-    sans-serif;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
 
   color: #04b813;
   width: 100%;
@@ -92,8 +86,6 @@
   padding: 20px;
   min-height: 250px;
 }
-
-
 
 .card-body p {
   font-size: 13px;
