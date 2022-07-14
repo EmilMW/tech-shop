@@ -8,4 +8,7 @@ password- admin
 
 in the topBar the is a LogIn, in there there is a button to sign up if you do not have account, also you can find a link to sign up page already from the home page if you are not registered.
 
+server- npm run dev
+client- npm start
+
 enjoy!
