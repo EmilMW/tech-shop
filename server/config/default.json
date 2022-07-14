@@ -4,6 +4,6 @@
     "url": "mongodb+srv://admin:admin@cluster0.2u1fs3u.mongodb.net/?retryWrites=true&w=majority"
   },
   "jwt": {
-    "secret": "asdfghjkl;'"
+    "secret": "emil-secret"
   }
 }
